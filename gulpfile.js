@@ -4,7 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var server = require('gulp-webserver');
 var sequence = require('gulp-sequence');
 var minCss = require('gulp-clean-css');
-var data = require('./src/data/data.json')
+var data = require('./src/data/data.json');
 gulp.task('minCss', function() {
     gulp.src('src/scss/*.scss')
         .pipe(scss())
@@ -21,7 +21,7 @@ gulp.task('server', ['minCss'], function() {
             livereload: true,
             open: true,
             middleware: function(req, res, next) {
-                if (req.url === '/render') {
+                if (req.url === '/render' || req.url === '/render2') {
 
                     res.end(JSON.stringify(data));
 

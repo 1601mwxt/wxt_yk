@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html.body,
+.wrap,
+header {
+    width: 100%;
+    font-size: .16rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background: #fff;
+}
+
+header {
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    span {
+        display: inline-block;
+        border: 1px solid #ccc;
+        font-size: .3rem;
+        height: .7rem;
+        padding: 0 4px;
+        line-height: .7rem;
+        text-align: center;
+    }
+    i {
+        font-size: .3rem;
+    }
+}
+
+.active {
+    background: #ccc;
+    color: #fff;
+}
+
+section {
+    width: 100%;
+    .image {
+        width: 100%;
+        height: 443px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .detail {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        h4 {
+            font-size: 18px;
+            text-indent: 10px;
+            padding-top: 10px;
+        }
+        i {
+            color: #aaa;
+            font-style: normal;
+            display: inline-block;
+            padding: 10px;
+        }
+        p {
+            color: red;
+            font-size: 16px;
+            padding: 10px;
+        }
+    }
+    .jf {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        p {
+            height: 1rem;
+            line-height: 1rem;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+    }
+    .xq {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 200px;
+        }
+        p {
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            border-bottom: 1px dashed #ccc;
+            span {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            b {
+                display: inline-block;
+                padding: 0 20px;
+            }
+        }
+    }
+}

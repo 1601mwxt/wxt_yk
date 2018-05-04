@@ -1,0 +1,56 @@
+{
+    "success": 0,
+    "data": {
+        "details": {
+            "One": [{
+                "pic": "pic1.jpg",
+                "tit": "Paisley欧式天丝四件套",
+                "tips": "柔滑兰精天丝，清凉亲肤保湿",
+                "price": "￥599"
+            }],
+            "Two": [{
+                "pic": "pic2.jpg",
+                "tit": "透气呼吸纱四件套",
+                "tips": "柔滑兰精天丝，清凉亲肤保湿",
+                "price": "￥459"
+            }],
+            "Three": [{
+                "pic": "pic3.jpg",
+                "tit": "透气呼吸纱四件套",
+                "tips": "换自然.迷雾雨林四件套",
+                "price": "￥399"
+            }],
+            "four": [{
+                "pic": "pic4.jpg",
+                "tit": "换自然.仲夏椰香四件套",
+                "tips": "换自然.迷雾雨林四件套",
+                "price": "￥299"
+            }]
+        },
+        "list": [{
+            "imgSrc": "pic1.jpg",
+            "title": "Paisley欧式天丝四件套",
+            "price": "￥599"
+        }, {
+            "imgSrc": "pic2.jpg",
+            "title": "透气呼吸纱四件套",
+            "price": "￥459"
+        }, {
+            "imgSrc": "pic3.jpg",
+            "title": "换自然.迷雾雨林四件套",
+            "price": "￥399"
+        }, {
+            "imgSrc": "pic4.jpg",
+            "title": "换自然.仲夏椰香四件套",
+            "price": "￥299"
+        }, {
+            "imgSrc": "pic2.jpg",
+            "title": "透气呼吸纱四件套",
+            "price": "￥459"
+        }, {
+            "imgSrc": "pic4.jpg",
+            "title": "换自然.仲夏椰香四件套",
+            "price": "￥299"
+        }]
+    }
+}

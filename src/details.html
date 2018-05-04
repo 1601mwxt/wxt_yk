@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style2.css">
+    <link rel="stylesheet" href="./css/icon/iconfont.css">
+    <script src='./js/lib/jquery-1.11.2.min.js'></script>
+    <script src='./js/lib/handlebars-v4.0.11.js'></script>
+    <!--<script src='./js/lib/require.js' data-main='js/main'></script>-->
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <i class="iconfont">&#xe653;</i>
+            <p><span class="btn">商品</span><span class="btn">详情</span></p>
+            <i class="iconfont">&#xe648;</i>
+        </header>
+        <section>
+            <div class="image"><img src="./img/detail1.jpg" alt=""></div>
+            <div class="detail">
+                <h4>Paisley欧式天丝四件套</h4>
+                <i>柔滑兰精天丝，清凉亲肤保湿</i>
+                <p>￥599</p>
+            </div>
+            <div class='jf'>
+                <p>积分换购最高得59积分</p>
+            </div>
+            <div class="xq">
+                <p><span>适应季节</span><b>四级通用</b></p>
+                <p><span>适应季节</span><b>四级通用</b></p>
+                <p><span>适应季节</span><b>四级通用</b></p>
+                <p><span>适应季节</span><b>四级通用</b></p>
+                <p><span>适应季节</span><b>四级通用</b></p>
+                <p><span>适应季节</span><b>四级通用</b></p>
+                <p><span>适应季节</span><b>四级通用</b></p>
+                <img src="./img/detail1.jpg" alt="">
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px';
+    // 封装handlebars
+    function handrender(id, data, container) {
+        var tpl = $(id).html();
+        var template = Handlebars.compile(tpl);
+        var html = template(data);
+        $(container).html(html);
+    };
+    $('.btn').eq(0).on('click', function() {
+        $(window).scrollTop(0);
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+    $('.btn').eq(1).on('mousemove', function() {
+        $(window).scrollTop(509);
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    // $(window).scroll(function() {
+    //     console.log($(this).scrollTop())
+    // })
+</script>
+
+</html>

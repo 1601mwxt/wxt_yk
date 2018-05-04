@@ -6,10 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>月考</title>
+    <link rel="stylesheet" href="./css/icon/iconfont.css">
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+
 </head>
 
 <body>
+    <div class="wrap">
+        <header>
+            <i class="iconfont">&#xe653;</i>
+            <b>居家</b>
+            <i class="iconfont">&#xe729;</i>
+        </header>
+        <section class="container swiper-container">
+            <div class="page"></div>
+            <ul class="list swiper-wrapper">
+                <li class="bedList swiper-slide">
+                    <script type='text/x-handlebars-template' id='tpl'>
+                        {{#each this}}
+                        <dl>
+                            <dt><img src="./img/{{this.imgSrc}}" alt=""></dt>
+                            <dd>
+                                <h5>{{this.title}}</h5>
+                                <span>{{this.price}}</span>
+                            </dd>
+                        </dl>
+                        {{/each}}
+                    </script>
 
+                    <!--
+                    <dl>
+                        <dt><img src="./img/pic1.jpg" alt=""></dt>
+                        <dd>
+                            <h5>Paisley欧式天丝四件套</h5>
+                            <span>$599</span>
+                        </dd>
+                    </dl>-->
+
+                    <!--<dl>
+                        <dt><img src="./img/pic1.jpg" alt=""></dt>
+                        <dd>
+                            <h5>Paisley欧式天丝四件套</h5>
+                            <span>$599</span>
+                        </dd>
+                    </dl>
+
+
+
+
+
+                    <dl>
+                        <dt><img src="./img/pic1.jpg" alt=""></dt>
+                        <dd>
+                            <h5>Paisley欧式天丝四件套</h5>
+                            <span>$599</span>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><img src="./img/pic1.jpg" alt=""></dt>
+                        <dd>
+                            <h5>Paisley欧式天丝四件套</h5>
+                            <span>$599</span>
+                        </dd>
+                    </dl>
+-->
+
+
+
+
+                </li>
+                <li class="swiper-slide beizi" style="background:pink">
+                    <script type='text/x-handlebars-template' id='tpl2'>
+                        {{#each this}}
+                        <dl>
+                            <dt><img src="./img/{{this.imgSrc}}" alt=""></dt>
+                            <dd>
+                                <h5>{{this.title}}</h5>
+                                <span>{{this.price}}</span>
+                            </dd>
+                        </dl>
+                        {{/each}}
+                    </script>
+                </li>
+                <li class="swiper-slide home" style="background:skyblue">
+                    <script type='text/x-handlebars-template' id='tpl3'>
+                        {{#each this}}
+                        <dl>
+                            <dt><img src="./img/{{this.imgSrc}}" alt=""></dt>
+                            <dd>
+                                <h5>{{this.title}}</h5>
+                                <span>{{this.price}}</span>
+                            </dd>
+                        </dl>
+                        {{/each}}
+                    </script>
+                </li>
+                <li class="swiper-slide shou" style="background:yellow">
+                    <script type='text/x-handlebars-template' id='tpl4'>
+                        {{#each this}}
+                        <dl>
+                            <dt><img src="./img/{{this.imgSrc}}" alt=""></dt>
+                            <dd>
+                                <h5>{{this.title}}</h5>
+                                <span>{{this.price}}</span>
+                            </dd>
+                        </dl>
+                        {{/each}}
+                    </script>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+    <script src='./js/lib/jquery-1.11.2.min.js'></script>
+    <script src='./js/lib/handlebars-v4.0.11.js'></script>
+    <script src='./js/lib/swiper-3.4.2.min.js'></script>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px';
+        var arr = ['床品件套', '被枕', '家居', '收纳', '布艺软装']
+        new Swiper('.container', {
+            pagination: '.page',
+            paginationClickable: true,
+            paginationBulletRender: function(swiper, index, className) {
+                return '<span class=' + className + '>' + arr[index] + '</span>'
+            }
+        });
+        // 封装handlebars
+        function handrender(id, data, container) {
+            var tpl = $(id).html();
+            var template = Handlebars.compile(tpl);
+            var html = template(data);
+            $(container).html(html);
+        };
+        //ajax渲染
+        $.ajax({
+            url: '/render',
+            dataType: 'json',
+            success: function(res) {
+                var dataList = res.data.list;
+                handrender('#tpl', dataList, '.bedList');
+                handrender('#tpl2', dataList, '.beizi');
+                handrender('#tpl3', dataList, '.home');
+                handrender('#tpl4', dataList, '.shou');
+                //跳转
+                $('dl').on('click', function() {
+                    alert(0)
+                })
+            }
+        });
+    </script>
 </body>
 
 </html>

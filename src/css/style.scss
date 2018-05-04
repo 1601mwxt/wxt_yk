@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body,
+header {
+    width: 100%;
+}
+
+header {
+    height: 1000px;
+    position: relative;
+    padding-top: .2rem;
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+        }
+    }
+    .page {
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        font-size: .16px;
+        top: 0;
+        left: 0;
+        display: flex;
+        text-align: center;
+    }
+    .page .swiper-pagination-bullet {
+        flex: 1;
+        font-size: 0.34rem;
+        color: #000;
+        background: none;
+        opacity: 1;
+        border-radius: 0;
+        width: 100%;
+        height: 0.75rem;
+    }
+    .page .swiper-pagination-bullet-active {
+        color: orange;
+    }
+    .banner {
+        width: 100%;
+        height: 4rem;
+        ol {
+            width: 100%;
+            height: 100%;
+            li {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body,
+.wrap,
+header {
+    width: 100%;
+    font-size: 16px;
+}
+
+header {
+    position: relative;
+    height: 1rem;
+    line-height: 1rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between
+}
+
+section {
+    width: 100%;
+    .list {
+        width: 100%;
+        li {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            dl {
+                width: 48%;
+                height: 3.7rem;
+                padding: 1%;
+                dt {
+                    width: 100%;
+                    height: 70%;
+                    text-align: center;
+                    img {
+                        width: 95%;
+                        height: 100%;
+                    }
+                }
+                dd {
+                    width: 100%;
+                    height: 30%;
+                    h5 {
+                        text-indent: 5px;
+                        font-size: .2rem;
+                        margin-top: 10px;
+                        padding-bottom: 5px;
+                    }
+                    span {
+                        display: inline-block;
+                        padding-left: 3%;
+                        color: red
+                    }
+                }
+            }
+        }
+    }
+    .page {
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        font-size: .16px;
+        top: 0;
+        left: 0;
+        display: flex;
+        text-align: center;
+    }
+    .page .swiper-pagination-bullet {
+        flex: 1;
+        font-size: 0.34rem;
+        color: #000;
+        background: none;
+        opacity: 1;
+        border-radius: 0;
+        width: 100%;
+        height: .9rem;
+    }
+    .page .swiper-pagination-bullet-active {
+        color: red;
+        border-bottom: 2px solid red;
+    }
+}
